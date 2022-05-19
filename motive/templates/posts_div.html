@@ -5,8 +5,8 @@
   <h1 style="font-family: 'Special Elite', cursive;color:black ;font-size: 30px;font-weight: bold; text-align: center;">{% block header %}Great <span style="color:rgb(255, 102, 0);">Minds </span> <br>Learn From Other,s Advice/Experience{% endblock %}</h1>
   <div id="posts" style="font-family: Montserrat;">
     {% for post in posts %}
-    <div class="card border-dark" style="background-color:rgb(187, 153, 129);">
-      <div class="card-header d-flex justify-content-between align-items-center">
+    <div class="card border-dark" style="background-color:rgb(187, 153, 129);;background-size: cover;background-repeat: no-repeat;background-position: center;">
+      <div class="card-header d-flex justify-content-between align-items-center" style="font-size: 20px;">
         <a href="/posts/{{post.user.username}}">{{post.user.username}}</a>
         <div>
           <span id="likes-count-{{post.id}}">
@@ -16,7 +16,7 @@
             class="fas fa-thumbs-up"
             id="like-button-{{post.id}}"
             onclick="like({{post.id}})"
-          style="color: rgb(51, 153, 51)"></i>
+          style="color: rgb(7, 71, 7)"></i>
           {% else %}
           <i
             class="far fa-thumbs-up"
@@ -82,7 +82,7 @@
         <p class="card-text">
           {% if post.comments|length > 0 %}
           <a data-bs-toggle="collapse" href="#comments-{{post.id}}" role="button">
-            <small>View {{post.comments|length}} Comments</small>
+            <small style="font-size: 16px;">View {{post.comments|length}} Comments</small>
           </a>
           {% else %}
           <small class="text-muted">No Comments</small>
