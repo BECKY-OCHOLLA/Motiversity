@@ -1,18 +1,30 @@
-{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
-%}
-<h1 align="center">POST A BLOG</h1>
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content %}
 
-<form method="POST">
-  <textarea name="text" id="text" class="form-control"></textarea>
-  <br />
-  <div align="center">
-    <button type="submit" class="btn btn-lg btn-primary">Post</button>
+<body style="background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBra4D5BRks4bbyB1jARfQ3lTfa9siTT9nBxw0UG2puSDcLNcv8q7pS32vEDSzRAoHFjg&usqp=CAU');background-size: cover;background-repeat: no-repeat;height: 600px;background-position: center;z-index: 1;" >
+  <div class="container-fluid" style="margin-top: 50px;">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 align="center" style="font-family: 'Special Elite', cursive;">Blog Here</h1>
+  
+        <form method="POST">
+          <textarea name="text" id="text" class="form-control"></textarea>
+          <br />
+          <div align="center">
+            <button type="submit" class="btn btn-lg btn-primary">Post</button>
+          </div>
+        </form>
+        <br />
+        <div align="center">
+          <a href="/home"><button type="button" class="btn btn-lg btn-secondary">Back</button></a>
+        </div>
+  
+      </div>
+  
+    </div>
+  
   </div>
-</form>
-<br />
-<div align="center">
-  <a href="/home"
-    ><button type="button" class="btn btn-lg btn-secondary">Back</button></a
-  >
-</div>
+
+</body>
+
+
 {% endblock %}
